@@ -1,7 +1,0 @@
-com\example\To_Do_App\service\ToDoService.class
-com\example\To_Do_App\ToDoAppApplication.class
-com\example\To_Do_App\repo\IToDoRepo.class
-com\example\To_Do_App\repo\package-info.class
-com\example\To_Do_App\controller\ToDoController.class
-com\example\To_Do_App\service\package-info.class
-com\example\To_Do_App\model\ToDo.class
