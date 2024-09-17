@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <img src="login.png" class="login-pic">
+        <div class="login-form">
+            <img src="loginLogo2.png" class="logoImage">
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p class="error-message" id="error-message"></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('login-form');
+
+            loginForm.addEventListener('submit', function(event) {
+                event.preventDefault(); 
+
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+                if (username === 'user' && password === '1234') {
+                    window.location.href = 'index.html';
+                } else {
+                    const errorMessage = document.querySelector('.error-message');
+                    errorMessage.textContent = 'Incorrect username or password. Please try again.';
+                    errorMessage.style.display = 'block'; 
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
